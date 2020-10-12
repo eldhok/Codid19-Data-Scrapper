@@ -24,3 +24,6 @@ If any one wants to develop a Covid19 information website or app and is stuck wi
    
 
 ![Covid Database Diagram](https://github.com/eldhok/Codid19-Regional-Data-Scrapper/blob/master/CovidDatabaseDiagram.png)
+
+![Covid Cases Table Sample](https://github.com/eldhok/Codid19-Regional-Data-Scrapper/blob/master/CovidTableSample.png)
+
