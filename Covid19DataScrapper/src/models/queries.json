@@ -1,0 +1,24 @@
+{
+    "insertToday_COVID_CASES_CountryData":"insert into COVID_CASES (TotalConfirmed, TotalRecovered, TotalDeath, ActiveCases, Source, DateTime) OUTPUT inserted.ID VALUES( @TotalConfirmed, @TotalRecovered, @TotalDeath, @ActiveCases, @Source, @DateTime)",
+    "insertToday_COVID_CASES_ProvinceData":"insert into COVID_CASES (TotalConfirmed, TotalRecovered, TotalDeath, ActiveCases, TotalTests, Population, Source, DateTime) OUTPUT inserted.ID VALUES( @TotalConfirmed, @TotalRecovered, @TotalDeath, @ActiveCases, @TotalTests, @Population, @Source, @DateTime)",
+    "insertToday_COVID_CASES_RegionData":"insert into COVID_CASES (TotalConfirmed, TotalRecovered, TotalDeath, ActiveCases, Source, DateTime) OUTPUT inserted.ID VALUES( @TotalConfirmed, @TotalRecovered, @TotalDeath, @ActiveCases, @Source, @DateTime)",
+    
+    "select_Country":"select ID from Country where Name = @CountryName",
+    "insert_Country_Cases":"insert into Country_Cases (Covid_CaseId, CountryCode) VALUES( @Covid_CaseId, @CountryCode)",
+    "insert_Country":"insert into Country (Name) OUTPUT inserted.ID values(@CountryName)",
+    
+    "select_Province":"select ID from Province where Name = @ProvinceName",
+    "insert_Province_Cases":"insert into Province_Cases (Covid_CaseId, ProvinceCode) VALUES( @Covid_CaseId, @ProvinceCode)",
+    "insert_Province_Canada":"insert into Province (Name, CountryId) OUTPUT inserted.ID SELECT @ProvinceName, ID FROM Country where Name='Canada'",
+    
+    "select_Region":"select ID from Region where Name = @RegionName",
+    "insert_Region_Cases":"insert into Region_Cases (Covid_CaseId, RegionCode) VALUES( @Covid_CaseId, @RegionCode)",
+    "insert_Region_Ontario":"insert into Region (Name, ProvinceId) OUTPUT inserted.ID SELECT @RegionName, ID FROM Province where Name='Ontario'",
+    "insert_Region_Nova_Scotia":"insert into Region (Name, ProvinceId) OUTPUT inserted.ID SELECT @RegionName, ID FROM Province where Name='Nova Scotia'",
+    "insert_Region_Saskatchewan":"insert into Region (Name, ProvinceId) OUTPUT inserted.ID SELECT @RegionName, ID FROM Province where Name='Saskatchewan'",
+
+    "insertHistory_COVID_CASES_CountryData":"insert into COVID_CASES (TotalConfirmed, TotalRecovered, TotalDeath, ActiveCases, Source) OUTPUT inserted.ID VALUES( @TotalConfirmed, @TotalRecovered, @TotalDeath, @ActiveCases, @Source)",
+    "insertHistory_COVID_CASES_ProviceData":"insert into COVID_CASES (TotalConfirmed, TotalRecovered, TotalDeath, ActiveCases, TotalTests, Population, Source) OUTPUT inserted.ID VALUES( @TotalConfirmed, @TotalRecovered, @TotalDeath, @ActiveCases, @TotalTests, @Population, @Source)",
+    "insertHistory_COVID_CASES_RegionData":"insert into COVID_CASES (TotalConfirmed, TotalRecovered, TotalDeath, ActiveCases, DateTime, Source) OUTPUT inserted.ID VALUES( @TotalConfirmed, @TotalRecovered, @TotalDeath, @ActiveCases, @DateTime, @Source)"
+   
+}

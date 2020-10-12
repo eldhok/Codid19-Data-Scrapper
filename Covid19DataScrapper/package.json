@@ -1,0 +1,16 @@
+{
+  "name": "covid19-data-scrapper",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eldho Kurian",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "mssql": "^6.2.0",
+    "node-fetch": "^2.6.1"
+  }
+}
