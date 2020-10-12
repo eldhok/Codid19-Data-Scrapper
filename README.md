@@ -23,4 +23,4 @@ If any one wants to develop a Covid19 information website or app and is stuck wi
 9. Now run covidDataToday.js by using the command `node covidDataToday.js` from the next day (fetch the data of the day it runs on). You should run this file everyday, so that the tables are upto date. ( You can create a timer triggger in your server to make covidDataToday.js run autamattically everyday at a particular time.
    
 
-
+![Covid Database Diagram](https://github.com/eldhok/Codid19-Regional-Data-Scrapper/blob/master/CovidDatabaseDiagram.png)
